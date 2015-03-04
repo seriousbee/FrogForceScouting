@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourApp="http://schemas.android.com/apk/res-auto">
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_send_now"
+          android:icon="@drawable/ic_action_send_now"
+          android:title="Send"
+          yourApp:showAsAction="ifRoom" />
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          yourApp:showAsAction="never"/>
+
+    <item android:id="@+id/action_clear_screen"
+          android:title="Clear form"
+          yourApp:showAsAction="never"/>
+</menu>

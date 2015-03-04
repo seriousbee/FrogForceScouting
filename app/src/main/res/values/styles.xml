@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#669900</item>
+        <item name="colorPrimaryDark">#ff3e6300</item>
+        <item name="colorAccent">#ffff2a4e</item>
+    </style>
+
+    <style name="MyActionBar"
+           parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#669900</item>
+
+    </style>
+
+</resources>

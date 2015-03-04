@@ -1,0 +1,569 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Team number"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/editTextTeamNumber"
+                        android:nextFocusDown="@+id/editTextMatchNumber"
+                        android:layout_weight="1"
+                        android:maxLength="4"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:hint="Match number"
+                        android:id="@+id/editTextMatchNumber"
+                        android:maxLength="3"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stacks"
+                    android:textSize="16sp"
+                    android:id="@+id/textView2"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:adjustViewBounds="true"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS1"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS2"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS3"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS4"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS5"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS6"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextS1"/>
+                    <EditText
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextS2"/>
+                    <EditText
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextS3"/>
+                    <EditText
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextS4"/>
+                    <EditText
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextS5"/>
+                    <EditText
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextS6"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS7"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS8"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS9"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS10"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS11"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonS12"/>
+                </LinearLayout>
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bins"
+                    android:textSize="16sp"
+                    android:id="@+id/textView3"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB1"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB2"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB3"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB4"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB5"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB6"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextB1"/>
+                    <EditText
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextB2"/>
+                    <EditText
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextB3"/>
+                    <EditText
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextB4"/>
+                    <EditText
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextB5"/>
+                    <EditText
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="false"
+                        android:text="0"
+                        android:gravity="center"
+                        android:id="@+id/editTextB6"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB7"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+
+                        android:id="@+id/buttonB8"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB9"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB10"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB11"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:onClick="buttonClicked"
+                        android:id="@+id/buttonB12"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Number of Coop Totes Stacked"
+                        android:textSize="20sp"
+                        android:textColor="#ff9e9e9e"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="1"
+                        android:maxLength="3"
+                        android:layout_weight="5"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/editTextCoop"/>
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Number of Stolen Bins"
+                        android:textSize="20sp"
+                        android:textColor="#ff9e9e9e"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="1"
+                        android:maxLength="3"
+                        android:layout_weight="5"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/editTextBinsStolen"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Robot tipped over"
+                        android:id="@+id/checkBox1"
+                        android:layout_weight="1"/>
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Robot fell apart"
+                        android:id="@+id/checkBox2"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Great noodle thrower"
+                        android:id="@+id/checkBox3"
+                        android:layout_weight="1"/>
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fast stacker"
+                        android:id="@+id/checkBox4"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Slow Elevator"
+                        android:id="@+id/checkBox5"
+                        android:layout_weight="1"/>
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Slow Drivetrain"
+                        android:id="@+id/checkBox6"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="High G point"
+                        android:id="@+id/checkBox7"
+                        android:layout_weight="1"/>
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Retarded drivers or HP"
+                        android:id="@+id/checkBox8"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate the team.\n3 - awesome, we want them! \n2 - nothing special... \n 1 - bad, avoid them!"
+                    android:textSize="16sp"
+                    android:id="@+id/textView4"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"/>
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBar"
+                    android:layout_gravity="center_horizontal"
+                    android:numStars="3"
+                    android:rating="0"
+                    android:stepSize="1"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
